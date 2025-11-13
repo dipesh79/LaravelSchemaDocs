@@ -1,0 +1,30 @@
+{
+    "name": "dipesh79/laravel-schema-docs",
+    "description": "Automatically generate Laravel database documentation and explore your schema with an interactive dashboard. Export your schema to YAML for easy reference and integration.",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Dipesh79\\LaravelSchemaDocs\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Dipesh79",
+            "email": "dipeshkhanal79@gmail.com",
+            "homepage": "https://www.khanaldipesh.com.np",
+            "role": "Maintainer"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": "^8.0"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Dipesh79\\LaravelSchemaDocs\\Providers\\LaravelSchemaDocsServiceProvider"
+            ]
+        }
+    }
+}
