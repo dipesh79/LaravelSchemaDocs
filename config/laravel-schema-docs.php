@@ -26,5 +26,10 @@ return [
     /**
      * Redirect URI from Schema Docs Dashboard.
      */
-    'redirect_url' => '/'
+    'redirect_url' => '/',
+    /**
+     * Show SchemaDocsPage
+     */
+    'show_pages' => env('SHOW_SCHEMA_DOCS',true)
+
 ];
