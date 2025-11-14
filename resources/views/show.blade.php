@@ -16,6 +16,7 @@
         <table style="width:100%;border-collapse:collapse;margin-top:12px;">
             <thead>
             <tr>
+                <th style="border:1px solid #ddd;padding:8px;text-align:left;background:#f8f8f8;">SN</th>
                 <th style="border:1px solid #ddd;padding:8px;text-align:left;background:#f8f8f8;">Column</th>
                 <th style="border:1px solid #ddd;padding:8px;text-align:left;background:#f8f8f8;">Type</th>
                 <th style="border:1px solid #ddd;padding:8px;text-align:left;background:#f8f8f8;">Nullable</th>
@@ -53,6 +54,7 @@
                     }
                 @endphp
                 <tr>
+                    <td style="border:1px solid #ddd;padding:8px;">{{$loop->iteration}}</td>
                     <td style="border:1px solid #ddd;padding:8px;">{{ $colName }}</td>
                     <td style="border:1px solid #ddd;padding:8px;">{{ $col['type'] ?? '' }}</td>
                     <td style="border:1px solid #ddd;padding:8px;">{{ !empty($col['nullable']) ? 'yes' : 'no' }}</td>
