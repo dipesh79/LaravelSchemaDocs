@@ -8,6 +8,9 @@ if (config('laravel-schema-docs.show_pages')) {
         Route::controller(LaravelSchemaDocsController::class)->group(function () {
             Route::get('/laravel-schema-docs', 'index')->name('laravelschemadocs.index');
             Route::get('/laravel-schema-docs/table/{name}', 'show')->name('laravelschemadocs.show');
+
+            // ERD
+            Route::get('/laravel-schema-docs/erd', 'erd')->name('laravelschemadocs.erd');
         });
     });
 }
