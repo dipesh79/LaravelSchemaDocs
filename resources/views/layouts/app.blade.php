@@ -80,6 +80,7 @@
             margin-bottom: 12px;
         }
     </style>
+    @stack('styles')
 </head>
 <body>
 @include('laravelschemadocs::partials.navbar')
@@ -89,5 +90,6 @@
 </main>
 
 @include('laravelschemadocs::partials.footer')
+@stack('scripts')
 </body>
 </html>

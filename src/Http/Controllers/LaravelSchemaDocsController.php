@@ -6,6 +6,7 @@ use Dipesh79\LaravelSchemaDocs\Exceptions\SchemaConfigNotFoundException;
 use Dipesh79\LaravelSchemaDocs\Exceptions\SchemaFileNotFoundException;
 use Dipesh79\LaravelSchemaDocs\Services\DocBuilder;
 use Dipesh79\LaravelSchemaDocs\Services\YamlManager;
+use Dipesh79\LaravelSchemaDocs\Services\YamlToErdParser;
 use Illuminate\Routing\Controller;
 use Illuminate\View\View;
 
@@ -56,6 +57,13 @@ class LaravelSchemaDocsController extends Controller
         return view('laravelschemadocs::show', [
             'name' => $name,
             'table' => $table,
+        ]);
+    }
+
+    public function erd(YamlToErdParser $parser): View
+    {
+        return view('laravelschemadocs::erd', [
+            'mermaid' => $parser->generate()
         ]);
     }
 }
