@@ -15,7 +15,7 @@ class GenerateDocsCommand extends Command
     {
         if ($this->option('fresh')) {
             $this->warn('🧹 Deleting existing schema documentation...');
-            LaravelSchemaDocs::clean(); // you implement this
+            LaravelSchemaDocs::clean();
         }
 
         $this->info('🔍 Extracting schema...');
