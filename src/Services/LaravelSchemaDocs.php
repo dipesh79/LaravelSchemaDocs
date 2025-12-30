@@ -76,4 +76,9 @@ class LaravelSchemaDocs
         $merged = array_replace_recursive($existing, $schema);
         $this->yamlManager->save($merged);
     }
+
+    public function clean(): void
+    {
+        $this->yamlManager->clean();
+    }
 }

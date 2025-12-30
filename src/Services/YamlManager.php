@@ -2,6 +2,7 @@
 
 namespace Dipesh79\LaravelSchemaDocs\Services;
 
+use Illuminate\Support\Facades\File;
 use Symfony\Component\Yaml\Yaml;
 
 class YamlManager
@@ -24,4 +25,12 @@ class YamlManager
     {
         file_put_contents($this->yamlPath, Yaml::dump($data, 4));
     }
+
+    public function clean(): void
+    {
+        if (File::exists($this->yamlPath)) {
+            File::delete($this->yamlPath);
+        }
+    }
+
 }
