@@ -16,6 +16,7 @@ class SchemaExtractor
             SELECT table_name
             FROM information_schema.tables
             WHERE table_schema = ?
+            ORDER BY table_name ASC
         ", [$database]);
 
         $result = [];
